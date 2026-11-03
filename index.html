@@ -1,0 +1,164 @@
+<style>
+
+  * { box-sizing: border-box; }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .frame {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px dashed;
+    background-color: #bbbbba;
+  }
+  
+  .moka-pot {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 20%;
+    height: 40%;
+    border: 1px solid;
+  }
+  
+  .pot-bottom {
+    position: absolute;
+    
+    left: 10%;
+    top: 70%;
+    
+    width: 80%;
+    height: 30%;
+    
+    background-color: #CED3D6;
+    clip-path: polygon(
+      15% 0%,
+      85% 0%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  
+  .pot-middle {
+    position: absolute;
+    left: 22%;
+    top: 62%;
+    width: 56%;
+    height: 10%;
+
+    background: #E97625;
+    border-radius: 12%;
+  }
+  
+  .pot-top {
+    position: absolute;
+    left: 12%;
+    top: 23%;
+    width: 76%;
+    height: 40%;
+
+    background: #F28C38;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      82% 100%,
+      18% 100%
+    );
+  }
+  
+  .pot-spout {
+    position: absolute;
+    left: 78%;
+    top: 24%;
+    width: 20%;
+    height: 23%;
+
+    background: #E97625;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      70% 35%,
+      0% 100%
+    );
+  }
+  
+  .pot-lid {
+    position: absolute;
+    left: 8%;
+    top: 19%;
+    width: 84%;
+    height: 6%;
+
+    background: #FFAC58;
+    border-radius: 50% 50% 12% 12%;
+  }
+
+  .pot-knob {
+    position: absolute;
+    left: 42%;
+    top: 14%;
+    width: 16%;
+    height: 5%;
+
+    background: #303033;
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      15% 0%,
+      85% 0%
+    );
+  }
+    
+
+  .pot-handle-connector {
+    position: absolute;
+    left: 7%;
+    top: 27%;
+    width: 10%;
+    height: 10%;
+
+    background: #303033;
+    border-radius: 3px;
+  }
+
+
+  .pot-handle {
+    position: absolute;
+    left: -20%;
+    top: 30%;
+    width: 30%;
+    height: 25%;
+
+    background: transparent;
+
+    border-top: 10px solid #303033;
+    border-left: 10px solid #303033;
+
+    border-top-left-radius: 35px;
+  }
+</style>
+
+
+<div class="frame">
+  <div class="moka-pot">
+    <div class="pot-bottom"></div>
+    <div class="pot-middle"></div>
+    <div class="pot-top"></div>
+    <div class="pot-spout"></div>
+    <div class="pot-lid"></div>
+    <div class="pot-knob"></div>
+    <div class="pot-handle-connector"></div>
+    <div class="pot-handle"></div>
+  </div>
+  
+  <div class="espresso-cups">
+  </div>
+  
+  
+</div>
