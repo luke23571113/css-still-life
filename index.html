@@ -1,4 +1,5 @@
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
   * { box-sizing: border-box; }
 
@@ -24,7 +25,7 @@
     top: 30%;
     width: 20%;
     height: 40%;
-    border: 1px solid;
+    z-index: 3;
   }
   
   .pot-bottom {
@@ -142,6 +143,181 @@
 
     border-top-left-radius: 35px;
   }
+
+    
+  .coffee-can {
+    position: absolute;
+    background-color: #F9CF16;
+    border-radius: 3% 3% 5% 5%;
+  }
+
+  /* Yellow lid */
+  .can-lid {
+    position: absolute;
+    left: -2%;
+    top: -3%;
+    width: 104%;
+    height: 7%;
+
+    background-color: #FFD91F;
+    border-radius: 50%;
+    border-bottom: 3px solid #D9A90D;
+  }
+
+  /* Red bottom label */
+  .can-bottom {
+    position: absolute;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    height: 25%;
+
+    background-color: #E93E35;
+    border-radius: 0 0 5% 5%;
+  }
+
+  .can-text {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    width: 90%;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 2.5vw;
+    line-height: 1.1;
+    color: #253C68;
+    text-align: center;
+  }
+
+  .can-left {
+    left: 29%;
+    top: 42%;
+    width: 18%;
+    height: 28%;
+    z-index: 1;
+  }
+
+  .can-right {
+    left: 43%;
+    top: 41%;
+    width: 21%;
+    height: 29%;
+    z-index: 2;
+  }
+
+  .espresso-cup {
+    position: absolute;
+    width: 9%;
+    height: 8%;
+    z-index: 4;
+  }
+
+  .cup-body {
+    position: absolute;
+    left: 15%;
+    top: 0;
+    width: 85%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+      to bottom,
+      #F5F0E6 0%,
+      #F5F0E6 20%,
+      #344E80 20%,
+      #344E80 40%
+    );
+
+    border-radius: 12% 12% 15% 15%;
+  }
+
+  .cup-handle {
+    position: absolute;
+    left: -30%;
+    top: 18%;
+    width: 55%;
+    height: 65%;
+
+    background: transparent;
+
+    border: 5px solid #F5F0E6;
+    border-right: none;
+    border-radius: 70% 0 0 70%;
+    z-index: 3;
+  }
+
+  .cup-triangle {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 45%;
+    height: 50%;
+
+    background: #D94C49;
+    clip-path: polygon(
+      0% 0%,
+      100% 50%,
+      0% 100%
+    );
+  }
+
+  .cup-rim {
+    position: absolute;
+    left: 15%;
+    top: -3%;
+    width: 85%;
+    height: 9%;
+
+    background: #FFF9EF;
+    border-radius: 50%;
+  }
+
+  .cup-top {
+    left: 39%;
+    bottom: 38%;
+    z-index: 5;
+  }
+
+  .cup-bottom {
+    left: 39%;
+    bottom: 30%;
+    z-index: 4;
+  }
+
+  /* Espresso cup on top of right coffee can */
+  .cup-on-can {
+    left: 49%;
+    top: 31%;
+    width: 9%;
+    height: 10%;
+    z-index: 5;
+  }
+
+  .cup-on-can .cup-handle {
+    left: 42%;
+    top: 20%;
+    width: 22%;
+    height: 60%;
+
+    background: transparent;
+    border: 5px solid #F5F0E6;
+    border-radius: 50%;
+
+    z-index: 3;
+  }
+
+  /* Mirrored red triangle on right side */
+  .cup-on-can .cup-triangle {
+    left: 55%;
+    width: 45%;
+    transform: scaleX(-1);
+  }
+
+  /* Slightly rounder body */
+  .cup-on-can .cup-body {
+    border-radius: 15% 15% 20% 20%;
+  }
+
 </style>
 
 
@@ -157,8 +333,36 @@
     <div class="pot-handle"></div>
   </div>
   
-  <div class="espresso-cups">
+  <div class="coffee-can can-left">
+    <div class="can-lid"></div>
+    <div class="can-text">CAFÉ<br>BUSTELO</div>
+    <div class="can-bottom"></div>
+  </div>
+
+  <div class="coffee-can can-right">
+    <div class="can-lid"></div>
+    <div class="can-text">CAFÉ<br>BUSTELO</div>
+    <div class="can-bottom"></div>
   </div>
   
-  
+  <div class="espresso-cup cup-top">
+    <div class="cup-handle"></div>
+    <div class="cup-body"></div>
+    <div class="cup-triangle"></div>
+    <div class="cup-rim"></div>
+  </div>
+
+  <div class="espresso-cup cup-bottom">
+    <div class="cup-handle"></div>
+    <div class="cup-body"></div>
+    <div class="cup-triangle"></div>
+    <div class="cup-rim"></div>
+  </div> 
+
+  <div class="espresso-cup cup-on-can">
+    <div class="cup-handle"></div>
+    <div class="cup-body"></div>
+    <div class="cup-triangle"></div>
+    <div class="cup-rim"></div>
+  </div>
 </div>
